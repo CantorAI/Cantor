@@ -1,0 +1,15 @@
+---
+#AutoRun:
+#- Script/init.py
+
+RegistryServer:
+  Enable: True
+  Port: 7309
+
+PublishToRegistry:
+  Enable: True
+  Servers:
+  -
+   Server_Address: shawndev007
+   Server_Port: 7309
+  

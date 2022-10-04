@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UI Framework Test</title>
+        <style>
+            html,body { 
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                box-sizing: border-box;
+            }
+            .MENU{
+                color: white;
+            }
+            
+        </style>
+        <script src="cantorJs.js"></script>
+
+    </head>
+    <body>
+    <div style="height:100%;display: flex;flex-direction: column;">
+        <cantor-panel style="flex: 0 0 60px;" src="menu.html">
+        </cantor-panel>
+        <div id="cc" style="background-color: black;flex: 0 0 30px;">
+            <a class="MENU">tool 1</a>
+            <a class="MENU">tool 2</a>
+        </div>
+        <div style="display: flex;flex-direction:row;flex:1 1 auto;overflow: hidden">
+            <div style="flex:0 0 400px; overflow: hidden;">
+                <img src="1.JPG" style="width: 100%;height: 100%;"/>
+            </div>
+            <cantor-panel id="idMain" style="flex:2 1 auto;  background-color: aqua;overflow-y: scroll;" src="part1.html">
+            </cantor-panel>
+            <div style="flex:0 0 400px; overflow: hidden;">
+                <img src="2.JPG" style="width: 100%;height: 100%;"/>
+            </div>
+
+        </div>
+        <div style="flex:0,1,10px"></div>
+    </div>
+    </body>
+</html>

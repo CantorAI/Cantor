@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UI Framework Menu Part</title>
+        <style>
+            label
+            {
+                background-color: beige;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function onTest()
+            {
+
+            }
+          
+        </script>
+        <div style="padding-top: 10px;display: flex"> 
+        <style>
+            a
+            {
+                font-size: medium;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            a:hover 
+            {
+                background-color:dodgerblue;
+                color: white;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        </style>
+        <div style="flex: 0 0 auto;">
+            <label>Cantor Dashboard</label>
+        </div>
+        <div style="flex:1 1 auto;padding-left: 30px;">
+            <a onclick="$('idMain').setAttribute('src','part1.html')">Test</a>
+            <a onclick="$('idMain').setAttribute('src','part2.html')">help</a>
+        </div>
+        <div style="flex: 0 0 1px;"></div>
+    </div>
+</body>
+</html>

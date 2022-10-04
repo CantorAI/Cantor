@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UI Framework Menu Part</title>
+    </head>
+    <body>
+        <script>
+            function onTest()
+            {
+
+            }
+          
+        </script>
+    <div style="padding-top: 10px;display: flex"> 
+        <style>
+            .Logo
+            {
+                background-image: radial-gradient(rgb(172, 161, 161), white, rgb(2, 0, 128));
+                border-radius: 10px;
+                backdrop-filter: blur(10px);
+                font-size:x-large;
+                font-style:oblique;
+                color:rgb(0, 255, 34);
+                padding-left: 30px;
+                padding-right: 30px;
+                white-space: nowrap;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding-top: 0.3em;
+                padding-bottom: 0.3em;
+            }
+            .MenuItem
+            {
+                font-size:x-large;
+                padding-top: 18px;
+                padding-bottom:18px;
+                padding-left: 20px;
+                padding-right: 20px;
+                white-space: nowrap;
+            }
+            .MenuItem:hover 
+            {
+                background-color:dodgerblue;
+                color: white;
+                font-weight: 800;
+                cursor: pointer;
+            }
+            .active 
+            {
+                color: red;
+            }
+            .MenuItem.active:hover 
+            {
+                background-color:dodgerblue;
+                color: red;
+                font-weight: 800;
+                cursor: pointer;
+            }
+        </style>
+        <div style="flex: 0 0 auto;margin-top: 15px;">
+            <label class="Logo">Cantor</label>
+        </div>
+        <div style="flex:1 1 auto;padding-left: 30px;display: flex;flex-wrap: nowrap;margin-bottom: 3px;">
+            <a  class="MenuItem" 
+                onclick="$('a',this.parentNode).removeClass('active');$(this).addClass('active');$('#idMain').set('src','dashboard.html');">Dashboard</a>
+            <a  class="MenuItem" 
+                onclick="$('a',this.parentNode).removeClass('active');$(this).addClass('active');$('#idMain').set('src','nodemap.html');">Node Map</a>
+            <a  class="MenuItem" 
+                onclick="$('a',this.parentNode).removeClass('active');$(this).addClass('active');$('#idMain').set('src','activity.html');">Activity</a>
+            <a  class="MenuItem" 
+                onclick="$('a',this.parentNode).removeClass('active');$(this).addClass('active');$('#idMain').set('src','pipeline.html');">Pipeline</a>
+            <a  class="MenuItem" 
+                onclick="$('a',this.parentNode).removeClass('active');$(this).addClass('active');$('#idMain').set('src','dataset.html');">Dataset</a>
+        </div>
+        <div style="flex: 0 0 1px;"></div>
+    </div>
+</body>
+</html>

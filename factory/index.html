@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cantor</title>
+        <style>
+            html,body { 
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                box-sizing: border-box;
+            }
+            .MENU{
+                color: white;
+            }
+            
+        </style>
+        <script src="cantorJs.js"></script>
+
+    </head>
+    <body>
+    <div style="height:100%;display: flex;flex-direction: column;">
+        <cantor-panel style="flex: 0 0 60px;" src="menu.html">
+        </cantor-panel>
+        <cantor-panel style="background-color: black;flex: 0 0 40px;" src="toolbar.html">
+        </cantor-panel>
+        <cantor-panel id="idMain" style="display: flex;flex-direction:row;flex:1 1 auto;overflow: hidden">
+        </cantor-panel>
+        <div style="flex:0,1,1px"></div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UI demo</title>
+        <script>
+                class MyCheckbox extends HTMLElement {
+    static formAssociated = true;
+    static observedAttributes = ['checked'];
+
+    constructor() {
+        super();
+        this._internals = this.attachInternals();
+        this.addEventListener('click', this._onClick.bind(this));
+    }
+
+    get form() { return this._internals.form; }
+    get name() { return this.getAttribute('name'); }
+    get type() { return this.localName; }
+
+    get checked() { return this.hasAttribute('checked'); }
+    set checked(flag) { this.toggleAttribute('checked', Boolean(flag)); }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        // name will always be "checked" due to observedAttributes
+        this._internals.setFormValue(this.checked ? 'on' : null);
+    }
+
+    _onClick(event) {
+        this.checked = !this.checked;
+    }
+    }
+    customElements.define('my-checkbox', MyCheckbox);
+            </script>
+    </head>
+    <body>
+        <div id="cc" style="background-color: yellow;">
+            <label><my-checkbox name="agreed"></my-checkbox> I read the agreement.</label>
+  
+        </div>
+
+
+    </body>
+</html>

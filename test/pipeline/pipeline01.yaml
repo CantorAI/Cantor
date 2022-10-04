@@ -1,0 +1,70 @@
+---
+Activities:
+  - Source1:
+      Module: src_activity.py
+      Desc: Source
+      ID: 2152ADAF-B528-4A13-ADD9-5C431B041DFD
+      Outputs:
+        - audio
+        - Video
+  - Tranform1:
+      Module: trans_activity.py
+      Desc: Transformer
+      ID: C5EBA23D-93F1-478B-9F27-E24209CEDAE8
+      Inputs:
+        - in
+      Outputs:
+        - out
+  - Render1:
+      Module: render_activity.py
+      Name: Render
+      ID: B5EBA23D-93F1-478B-9F27-E24209CEDAE8
+      Inputs:
+        - in
+Graph:
+  ActivityInstances:
+    - src1: #instance name
+        Activity: Source1
+        Settings: param1=1;param2=2
+    - audio_tranform:
+        Activity: Tranform1
+        Settings: 
+    - video_tranform:
+        Activity: Tranform1
+        Settings: 
+    - Render1:
+        Activity: Render1
+        Settings: audio=1;video=2         
+  Connections:
+    -
+      Start:
+        Activity: src1
+        Pin: audio
+      End:
+        Activity: audio_tranform
+        Pin: in
+    -
+      Start:
+        Activity: src1
+        Pin: video
+      End:
+        Activity: video_tranform
+        Pin: in
+    -
+      Start:
+        Activity: audio_tranform
+        Pin: out
+      End:
+        Activity: Render1
+        Pin: in
+    -
+      Start:
+        Activity: src1
+        Pin: audio
+      End:
+        Activity: Render1
+        Pin: in
+
+
+
+
