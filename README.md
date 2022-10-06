@@ -6,4 +6,4 @@ An all-in-one Distributed Computing Platform for AI and IOT with
 - Object Store,  
 - Message Queue,  
 - Global Variables   
-## Coding for cluster as simple as coding in a single computer
+## Coding for a very large scale cluster as simple as coding in a single computer
