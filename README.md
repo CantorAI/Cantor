@@ -1,6 +1,6 @@
 # Cantor
 An all-in-one Distributed Computing Platform for AI and IOT with  
-**Dataflow Graph,  
+** Dataflow Graph,  
 Activity,  
 task Scheduler,  
 Object Store,  
